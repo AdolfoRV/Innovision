@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovision</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container" id="mainContainer">
+        <aside class="sidebar" id="sidebar">
+            <h2>Opciones</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#">Nuevo chat</a></li>
+                <li><a href="#">Historial</a></li>
+                <li><a href="#">Ajustes</a></li>
+                <li><a href="#">Salir</a></li>
+                <li><button id="themeButton">Cambiar tema</button></li>
+            </ul>
+        </aside>
+
+        <!-- Botón para abrir/cerrar la sidebar -->
+        <button class="toggle-button" id="toggleButton">☰</button>
+
+        <div class="container">
+            <header class="header">
+                <h1>MinvuGPT</h1>
+            </header>
+
+            <div class="chat-window">
+                <div class="messages" id="chatMessages">
+                    <!-- Mensajes del chat aparecerán aquí -->
+                </div>
+            </div>
+
+            <div class="input-area">
+                <textarea id="userInput" placeholder="Escribe tu mensaje aquí..."></textarea>
+                <button id="sendButton">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
