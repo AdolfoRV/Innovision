@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovision</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>ViviendaVisión</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main-container" id="mainContainer">
-        <aside class="sidebar" id="sidebar">
-            <h2>Opciones</h2>
-            <ul class="sidebar-menu">
-                <li><a href="#">Nuevo chat</a></li>
-                <li><a href="#">Historial</a></li>
-                <li><a href="#">Ajustes</a></li>
-                <li><a href="#">Salir</a></li>
-                <li><button id="themeButton">Cambiar tema</button></li>
+    <header>
+        <h1>ViviendaVisión</h1>
+        <nav>
+            <ul>
+                <li><a href="#search">Buscar Viviendas</a></li>
+                <li><a href="#advice">Asesoría</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
-        </aside>
+        </nav>
+    </header>
 
-        <!-- Botón para abrir/cerrar la sidebar -->
-        <button class="toggle-button" id="toggleButton">☰</button>
+    <section id="search">
+        <h2>Buscar Viviendas</h2>
+        <form id="searchForm">
+            <label for="location">Ubicación:</label>
+            <input type="text" id="location" placeholder="Ej. Ñuñoa, Maipú" required>
+            
+            <label for="subsidyType">Tipo de Subsidio:</label>
+            <select id="subsidyType" required>
+                <option value="DS49">DS49</option>
+                <option value="DS19">DS19</option>
+                <option value="DS01">DS01</option>
+            </select>
+            
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="results"></div>
+    </section>
 
-        <div class="container">
-            <header class="header">
-                <h1>MinvuGPT</h1>
-            </header>
+    <section id="advice">
+        <h2>Asesoramiento Personalizado</h2>
+        <p>¿Necesitas ayuda para encontrar una vivienda que cumpla con los requisitos de tu subsidio?</p>
+        <button id="requestAdvice">Solicitar Asesoría</button>
+        <div id="adviceResult"></div>
+    </section>
 
-            <div class="chat-window">
-                <div class="messages" id="chatMessages">
-                    <!-- Mensajes del chat aparecerán aquí -->
-                </div>
-            </div>
+    <footer id="contact">
+        <p>Contacto: info@viviendavision.com | Tel: +56 9 1234 5678</p>
+    </footer>
 
-            <div class="input-area">
-                <textarea id="userInput" placeholder="Escribe tu mensaje aquí..."></textarea>
-                <button id="sendButton">Enviar</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
